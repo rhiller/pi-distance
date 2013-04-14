@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# sends the cosm.json file to cosm account
+
+APIKEY=your_key_here
+FEED=your_feed_id_here
+
+curl --request PUT --data-binary @cosm.json  --header "X-ApiKey: ${APIKEY}"  --verbose  http://api.cosm.com/v2/feeds/${FEED} 2>&1 > curl.log 2>&1
+
