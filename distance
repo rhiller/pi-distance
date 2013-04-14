@@ -24,32 +24,6 @@ GPIO.setup(12, GPIO.OUT)
 GPIO.setup(16, GPIO.IN)
 
 
-""" Digital filter designed by mkfilter/mkshape/gencode   A.J. Fisher
-   Command line: ./mkfilter -Bu -Lp -o 4 -a 3.3333330000e-01 0.0000000000e+00 -l"""
-
-""" Digital filter designed by mkfilter/mkshape/gencode   A.J. Fisher
-   Command line: ./mkfilter -Bu -Lp -o 4 -a .05 0 -l
-1 Hz sample rate, .05 Hz cutoff
-"""
-
-xv = [0.0]*5
-yv = [0.0]*5
-def digitalFilter(nextInput):
-    xv[0] = xv[1]
-    xv[1] = xv[2]
-    xv[2] = xv[3]
-    xv[3] = xv[4]
-    xv[4] = nextInput / 2.400388646e+03
-    yv[0] = yv[1]
-    yv[1] = yv[2]
-    yv[2] = yv[3]
-    yv[3] = yv[4]
-    yv[4] =   (xv[0] + xv[4]) + 4 * (xv[1] + xv[3]) + 6 * xv[2] \
-                     + ( -0.4382651423 * yv[0]) + (  2.1121553551 * yv[1]) \
-                     + ( -3.8611943490 * yv[2]) + (  3.1806385489 * yv[3])
-    return yv[4]
-
-
 def writeDistance(distance, idTag):
 	sys.stderr.write("%s %s: distance %f\n" % (time.ctime(), idTag, distance))
 	cosm = open("cosm.json", "w")

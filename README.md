@@ -8,7 +8,7 @@ HC-SR04 down to 3v3 to be safe as input to the Raspberry Pi GPIO pin.
 
 The python file 'distance' does the measurement by controlling the distance
 sensor and then timing the response.  Since this is done on the Raspberry Pi
-Linux, there are occasiional glitches in the measurements.  Those are (hopefully) filtered out.
+Linux (not exactly a real-time operating system), there are occasiional glitches in the measurements.  Those are (hopefully) filtered out.
 
 Since this is intended for measuring sump pump water levels, the ReferenceDistance is a critical parameter.  It is the measured length of the PVC pipe from the
 sensor to the other end.
