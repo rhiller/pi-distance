@@ -18,6 +18,7 @@ This also calculates the intervals between pump runs by looking for rapid change
 Sensor connections:
 (the pin numbers correspond to the markings on the Adafruit Prototyping Plate http://www.adafruit.com/products/801 )
 
+<pre>
   HC-SR04
  +---------+
  |         |
@@ -41,3 +42,4 @@ Sensor connections:
                                 /
                                 |
                                Gnd
+</pre>
