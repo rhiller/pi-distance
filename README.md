@@ -14,3 +14,30 @@ Since this is intended for measuring sump pump water levels, the ReferenceDistan
 sensor to the other end.
 
 This also calculates the intervals between pump runs by looking for rapid changes in water level.
+
+Sensor connections:
+(the pin numbers correspond to the markings on the Adafruit Prototyping Plate http://www.adafruit.com/products/801 )
+
+  HC-SR04
+ +---------+
+ |         |
+ |         |
+ |     Vcc |--- +5v
+ |         |
+ |    Trig |--- pin 18 (GPIO 12)
+ |         |
+ |    Echo |--------------------+
+ |         |                    |
+ |     Gnd |----+               \ 
+ |         |    |               / 470 ohm
+ +---------+    |               \
+                |               /
+               Gnd              |
+                                +---------------> pin 23 (GPIO 16)
+                                |
+                                \
+                                /
+                                \ 1k ohm
+                                /
+                                |
+                               Gnd
