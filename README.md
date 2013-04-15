@@ -25,7 +25,7 @@ Sensor connections:
  |         |
  |     Vcc |--- +5v
  |         |
- |    Trig |--- pin 18 (GPIO 12)
+ |    Trig |--- pin #18 (GPIO 12)
  |         |
  |    Echo |--------------------+
  |         |                    |
@@ -34,7 +34,7 @@ Sensor connections:
  +---------+    |               \
                 |               /
                Gnd              |
-                                +---------------> pin 23 (GPIO 16)
+                                +---------------> pin #23 (GPIO 16)
                                 |
                                 \
                                 /
