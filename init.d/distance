@@ -1,0 +1,24 @@
+#! /bin/sh
+# /etc/init.d/distance
+#
+
+# Some things that run always
+touch /var/lock/distance
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting script distance "
+    /home/pi/distance/distanceRun
+    ;;
+  stop)
+    echo "Stopping script distance"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/distance {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
