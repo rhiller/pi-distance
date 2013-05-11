@@ -16,6 +16,7 @@ sensor to the other end.
 This also calculates the intervals between pump runs by looking for rapid changes in water level.
 
 Sensor connections:
+
 The program uses the GPIO.BOARD option, meaning that the numbers correspond to
 the pins on the Raspberry Pi P1 connector.  The correspondence between P1
 connector and the Broadcom GPIO values can be found in a pinout diagram such
