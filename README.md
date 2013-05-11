@@ -16,7 +16,13 @@ sensor to the other end.
 This also calculates the intervals between pump runs by looking for rapid changes in water level.
 
 Sensor connections:
-(the pin numbers correspond to the markings on the Adafruit Prototyping Plate http://www.adafruit.com/products/801 )
+The program uses the GPIO.BOARD option, meaning that the numbers correspond to
+the pins on the Raspberry Pi P1 connector.  The correspondence between P1
+connector and the Broadcom GPIO values can be found in a pinout diagram such
+as http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-and-pins/
+
+(I used the Adafruit Prototyping Plate http://www.adafruit.com/products/801 which has screw numbers corresponding to the Broadcom GPIO numbers)
+
 
 <pre>
   HC-SR04
@@ -25,7 +31,7 @@ Sensor connections:
  |         |
  |     Vcc |--- +5v
  |         |
- |    Trig |--- pin #18 (GPIO 12)
+ |    Trig |--- P1.12 (GPIO18)
  |         |
  |    Echo |--------------------+
  |         |                    |
@@ -34,7 +40,7 @@ Sensor connections:
  +---------+    |               \
                 |               /
                Gnd              |
-                                +---------------> pin #23 (GPIO 16)
+                                +---------------> P1.16 (GPIO23)
                                 |
                                 \
                                 /
