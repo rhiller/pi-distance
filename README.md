@@ -15,6 +15,29 @@ sensor to the other end.
 
 This also calculates the intervals between pump runs by looking for rapid changes in water level.
 
+On the Raspberry Pi, I copied this entire tree into /home/pi/pi-distance.  
+
+Then run (as root):  
+cp init.d/distance /etc/init.d/  
+cp cron.d/checkup /etc/cron.d/  
+
+If you decide to move things around, you will need to fix up the paths in the script files.
+
+The init script is based on: http://www.debian-administration.org/articles/28
+
+init.d/distance:  init script to be placed into the /etc/init.d/ directory
+make sure that it is executable and owned by root:  
+  -rwxr-xr-x 1 root root 470 Feb  1 12:09 distance  
+
+Then run (as root):  
+  update-rc.d distance defaults  
+to create the needed symlinks so that this will all start on boot  
+
+if you decide to remove the script from the startup sequence run:  
+  update-rc.d -f distance remove  
+
+The checkup script pings the default gateway every 10 minutes and reboots the Pi if it doesn't get a response.  This is to recover from issues with the USB WiFi adapter.
+
 Sensor connections:
 
 The program uses the GPIO.BOARD option, meaning that the numbers correspond to

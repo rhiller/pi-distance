@@ -99,7 +99,7 @@ class RangeSensor:
 		return self.last
 
 def sendToCosm():
-	os.system('sendToCosm')
+	os.system('./sendToCosm')
 
 def doit(interval):
 	rs = RangeSensor()

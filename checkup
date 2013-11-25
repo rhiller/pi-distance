@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# pick one if multiple default routes
+defaultGateway=`ip route show | grep default | tail -1 | awk '{ print $3 }'`
+
+ping -w 2 -i .5 -q $defaultGateway 2>&1 > /dev/null
+res=$?
+if [ $res -eq 0 ]
+then
+	logger "checkup: first try succeeded"
+	exit 0
+fi
+logger "checkup: first try failed...retrying"
+ping -w 2 -i .5 -q $defaultGateway 2>&1 > /dev/null
+res=$?
+if [ $res -eq 0 ]
+then
+	logger "checkup: second try succeeded"
+	exit 0
+fi
+
+logger "checkup: second try also failed...rebooting"
+reboot

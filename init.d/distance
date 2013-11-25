@@ -9,7 +9,7 @@ touch /var/lock/distance
 case "$1" in
   start)
     echo "Starting script distance "
-    /home/pi/distance/distanceRun
+    /home/pi/pi-distance/distanceRun
     ;;
   stop)
     echo "Stopping script distance"

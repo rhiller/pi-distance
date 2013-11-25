@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /home/pi/distance
+cd /home/pi/pi-distance
 
 nohup ./distance &
