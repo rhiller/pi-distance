@@ -20,4 +20,4 @@ then
 fi
 
 logger "checkup: second try also failed...rebooting"
-reboot
+/sbin/reboot
