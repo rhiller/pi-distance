@@ -7,7 +7,7 @@ ping -w 2 -i .5 -q $defaultGateway 2>&1 > /dev/null
 res=$?
 if [ $res -eq 0 ]
 then
-	logger "checkup: first try succeeded"
+	# logger "checkup: first try succeeded"
 	exit 0
 fi
 logger "checkup: first try failed...retrying"
