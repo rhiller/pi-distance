@@ -76,6 +76,7 @@ as http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-
 My cable:
 I used a floppy disk drive power cable harvested from an old PC for the
 connector with pigtail.  I used a piece of Cat 5 network cable for the rest.
+I cut off the unused pair.  All three remaining white wires were connected together on both ends.
 
   HC-SR04
  +---------+    Connector     Cat 5
