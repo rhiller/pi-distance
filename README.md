@@ -72,4 +72,23 @@ as http://www.raspberrypi-spy.co.uk/2012/06/simple-guide-to-the-rpi-gpio-header-
                                 /
                                 |
                                Gnd
+
+My cable:
+I used a floppy disk drive power cable harvested from an old PC for the
+connector with pigtail.  I used a piece of Cat 5 network cable for the rest.
+
+  HC-SR04
+ +---------+    Connector     Cat 5
+ |         |   +---------+    Cable
+ |         |   |         |
+ |     Vcc |---| Yellow  |--- Blue ----
+ |         |   |         |
+ |    Trig |---| Black   |--- Green ---
+ |         |   |         |
+ |    Echo |---| Black   |--- Orange --
+ |         |   |         |
+ |     Gnd |---| Red     |--- White ---
+ |         |   |         |
+ +---------+   +---------+
+
 </pre>
